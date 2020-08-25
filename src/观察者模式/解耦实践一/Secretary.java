@@ -23,12 +23,18 @@ public class Secretary {
     }
 
     //与同事解绑
-public void Detach(Observer observer){
+    public void Detach(Observer observer){
         observers.remove(observer);
-}
+    }
 
+    //通知
+    public void Notify(){
+        for (Observer item : observers) {
+            item.Update();
+        }
+    }
 
-
+    //修改前台状态
     public String getAction() {
         return action;
     }
