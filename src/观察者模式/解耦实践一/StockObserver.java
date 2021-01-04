@@ -10,10 +10,14 @@ import java.text.MessageFormat;
  **/
 public class StockObserver extends Observer {
 
+    public StockObserver(String name, Secretary secretary){
+        //调用父类构造方法
+        super(name, secretary);
+    }
 
 
     @Override
     public void Update() {
-        System.out.println(MessageFormat.format("{0} {01} 关闭股票行情，继续工作！");
+        System.out.println(MessageFormat.format("{0} {01} 关闭股票行情，继续工作！", name, secretary));
     }
 }
